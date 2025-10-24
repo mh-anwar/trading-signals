@@ -1,0 +1,31 @@
+# Core ML and Data Science
+torch>=2.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+yfinance>=0.2.18
+ta>=0.10.2
+
+# Web Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+pydantic>=2.0.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+alembic>=1.11.0
+
+# AWS (optional)
+boto3>=1.28.0
+
+# Data Processing
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Development
+pytest>=7.4.0
+
+# Jupyter for Colab
+matplotlib>=3.7.0
+seaborn>=0.12.0
