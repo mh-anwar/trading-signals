@@ -6,7 +6,7 @@ from typing import List, Dict, Any
 import torch
 import numpy as np
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import structlog
 
 from app.core.config import settings
@@ -163,7 +163,7 @@ class PredictionService:
                 # Align with price data
                 for col in indicator_pivot.columns:
                     if col in ['SMA_20', 'SMA_50', 'RSI', 'MACD']:
-                        aligned_values = indicator_pivot[col].reindex(df['date']).fillna(method='ffill').fillna(0)
+                        aligned_values = indicator_pivot[col].reindex(df['date']).ffill().fillna(0)
                         features.append(aligned_values.values)
         
         # Stack features
