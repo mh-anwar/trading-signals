@@ -85,7 +85,7 @@ class StockDataProcessor:
         features_df = df[feature_columns].copy()
         
         # Handle missing values
-        features_df = features_df.fillna(method='ffill').fillna(0)
+        features_df = features_df.ffill().fillna(0)
         
         return features_df
     
@@ -213,3 +213,4 @@ class MultiStockProcessor:
             all_y.append(data['y_train'])
         
         return np.concatenate(all_X), np.concatenate(all_y)
+# Add data preprocessing improvements
