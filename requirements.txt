@@ -19,6 +19,9 @@ alembic>=1.11.0
 # AWS (optional)
 boto3>=1.28.0
 
+# Logging
+structlog>=23.1.0
+
 # Data Processing
 requests>=2.31.0
 python-dotenv>=1.0.0
