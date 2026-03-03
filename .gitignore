@@ -162,3 +162,6 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+
+# Local notes
+NOTES.local.md
